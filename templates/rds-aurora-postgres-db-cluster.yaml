@@ -174,12 +174,12 @@ Parameters:
   EnvironmentId:
     Type: String
     Description: The environment tag is used to designate the Environment Stage of the associated AWS resource.
+    Default: dev
     AllowedValues:
       - dev
       - test
       - pre-prod
       - prod
-    Default: dev
   ProjectId:
     Type: String
     Description: The ProjectId tag is used to designate the application of the associated AWS resource. In this capacity application does not refer to an installed software component, but rather the overall business application that the resource supports.
@@ -192,6 +192,7 @@ Parameters:
   CostCenter:
     Type: String
     Description: The CostCenter tag is used to designate the cost center associated with the project of the given AWS resource.
+    Default: 0000
     AllowedPattern: "^[a-zA-Z0-9]+$"
     ConstraintDescription:  provide a valid cost center
   Contact:
@@ -202,11 +203,13 @@ Parameters:
   NotificationList:
     Type: String
     Description: The Email notification list is used to configure a SNS topic for sending cloudwatch alarm and RDS Event notifications
+    Default: user@domain.com
     AllowedPattern: '^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
     ConstraintDescription: provide a valid email address.
   Confidentiality:
     Type: String
     Description: The Confidentiality tag is used to designate the confidentiality classification of the data that is associated with the resource.
+    Default: private
     AllowedValues:
       - public
       - private
