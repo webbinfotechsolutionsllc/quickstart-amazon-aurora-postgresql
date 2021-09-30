@@ -178,7 +178,7 @@ Parameters:
     AllowedValues:
       - dev
       - test
-      - pre-prod
+      - stage
       - prod
   ProjectId:
     Type: String
@@ -264,7 +264,7 @@ Conditions:
   IsUseDBSnapshot: !Not [!Equals [!Ref DBSnapshotId, ""]]
   IsNotUseDBSnapshot: !Not [Condition: IsUseDBSnapshot]
   IsProd: !Equals [!Ref EnvironmentId, 'prod']
-  IsReplica: !Or [!Equals [!Ref EnvironmentId, 'pre-prod'], Condition: IsProd]
+  IsReplica: !Or [!Equals [!Ref EnvironmentId, 'stage'], Condition: IsProd]
   DoDBBootStrap: !And
     - !Not [!Equals [!Ref LambdaBootStrapS3Bucket, '']]
     - !Not [!Equals [!Ref LambdaBootStrapS3Key, '']]
