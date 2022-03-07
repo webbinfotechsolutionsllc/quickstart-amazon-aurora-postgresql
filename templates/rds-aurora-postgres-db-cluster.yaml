@@ -108,14 +108,19 @@ Parameters:
     Type: String
     Default: 12.4
     AllowedValues:
-      - 10.11
-      - 10.12
       - 10.13
       - 10.14
+      - 10.16
+      - 10.17
+      - 10.18
+      - 10.19
       - 11.6
       - 11.7
-      - 11.8
       - 11.9
+      - 11.11
+      - 11.12
+      - 11.13
+      - 11.14
       - 12.4
       - 12.6
       - 12.7
@@ -234,21 +239,31 @@ Parameters:
 ###############################################################################
 Mappings: 
   DBFamilyMap: 
-    "10.11":
-      "family": "aurora-postgresql10"
-    "10.12":
-      "family": "aurora-postgresql10"
     "10.13":
       "family": "aurora-postgresql10"
     "10.14":
+      "family": "aurora-postgresql10"
+    "10.16":
+      "family": "aurora-postgresql10"
+    "10.17":
+      "family": "aurora-postgresql10"
+    "10.18":
+      "family": "aurora-postgresql10"
+    "10.19":
       "family": "aurora-postgresql10"
     "11.6":
       "family": "aurora-postgresql11"
     "11.7":
       "family": "aurora-postgresql11"
-    "11.8":
-      "family": "aurora-postgresql11"
     "11.9":
+      "family": "aurora-postgresql11"
+    "11.11":
+      "family": "aurora-postgresql11"
+    "11.12":
+      "family": "aurora-postgresql11"
+    "11.13":
+      "family": "aurora-postgresql11"
+    "11.14":
       "family": "aurora-postgresql11"
     "12.4":
       "family": "aurora-postgresql12"
